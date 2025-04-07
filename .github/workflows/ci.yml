@@ -18,16 +18,29 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Install backend dependencies
+        working-directory: ./backend
         run: |
-          npm install
-          working-directory: ./frontend
-          
-      - name: Run tests
+          pip install -r requirements.txt  # Install backend dependencies
+
+      - name: Start Backend API
+        working-directory: ./backend
         run: |
-          cd frontend
-          npm install
-          npm test
+          nohup python restapi.py &  # Start the backend in the background
+
+      - name: Wait for backend to start
+        run: |
+          sleep 10  # Give the backend time to start up
+
+      - name: Install frontend dependencies
+        working-directory: ./frontend
+        run: |
+          npm install  # Install frontend dependencies
+
+      - name: Run frontend tests
+        working-directory: ./frontend
+        run: |
+          npm test  # Run frontend tests
 
   docker-build-and-push:
     runs-on: ubuntu-latest
@@ -57,5 +70,3 @@ jobs:
         run: |
           docker build -t your-dockerhub-username/frontend:latest .
           docker push your-dockerhub-username/frontend:latest
-
-      
