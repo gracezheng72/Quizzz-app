@@ -1,0 +1,107 @@
+/* Highlighted Option Styles */
+button.selected {
+  background-color: #27b473;
+  /* Greenish color to indicate selection */
+  color: white;
+  /* White text for better contrast */
+  border: 2px solid #056c26;
+  /* Add border to distinguish the selected option */
+}
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #90ebb4;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.App {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: none;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Header Styles */
+.header {
+  background-color: #056c26;
+  color: white;
+  padding: 15px 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Spacing for the content to avoid overlap with the header */
+.App {
+  margin-top: 80px;
+}
+
+/* General Button Styles */
+button {
+  background-color: #f8fcfa;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px 0;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #27b473;
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Button Sizes for Next, Finish, Start Quiz, Restart Quiz */
+button.small-btn {
+  font-size: 14px;
+  padding: 8px 15px;
+  width: auto;
+  margin: 5px 0;
+  border-radius: 4px;
+}
+
+/* Quiz Question and Option Styles */
+h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100%;
+  text-align: left;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+/* Start/Finish Page Styles */
+.start-page,
+.end-page {
+  font-size: 18px;
+}
+
+.start-page p,
+.end-page p {
+  margin-bottom: 20px;
+}
