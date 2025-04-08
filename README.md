@@ -2,13 +2,12 @@
 This is a basic quiz app that allows users to take a quiz.
 
 # Prerequisites
-- Node.js (v14 or higher)
-- npm (v6 or higher)
-- - Python (v3.9 or higher)
-- Required Python packages:
-  - `Flask==3.0.3`
-  - `Flask-Cors==4.0.0`
-  - `Flask-SQLAlchemy==3.1.1`
+- **Node.js** (v14 or higher)
+- **npm** (v6 or higher)
+- **Python** (v3.9 or higher)
+- **Flask** (v3.0.3)
+- **Flask-Cors** (v4.0.0)
+- **Flask-SQLAlchemy** (v3.1.1)
 
 # Getting Started with Quizzz App
 Follow these steps to set up and run the app locally.
