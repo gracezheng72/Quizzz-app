@@ -4,7 +4,14 @@ from flask_cors import CORS
 
 # Initialize Flask app and database
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all domains (change for production)
+
+# Set a secure random secret key
+app.config['SECRET_KEY'] = 'secure_random_secret_key'
+
+# Enable CORS for specific origins
+CORS(app, resources={r"/*": {"origins": ["http://localhost:3000"]}})
+
+# Configure database settings
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///quiz.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
@@ -71,3 +78,7 @@ def update_question(question_id):
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)
+
+
+
+

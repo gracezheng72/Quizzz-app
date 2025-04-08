@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
 
@@ -17,9 +24,9 @@ function App() {
     const response = await fetch('http://localhost:8000/quiz');
     const data = await response.json();
     setQuizData(data); // Set the fetched quiz data
-    setQuestion(data[currentIndex].question); // Set the first question
-    setOptions(data[currentIndex].options); // Set the first question options
-  }, [currentIndex]);
+    setQuestion(`${data[0].id}. ${data[0].question}`); // Set the first question with its ID
+    setOptions(data[0].options); // Set the first question options
+  }, []);
 
   // Fetch quiz data when component mounts
   useEffect(() => {
@@ -40,7 +47,7 @@ function App() {
       if (currentIndex < quizData.length - 1) {
         const nextIndex = currentIndex + 1;
         setCurrentIndex(nextIndex);
-        setQuestion(quizData[nextIndex].question);
+        setQuestion(`${quizData[nextIndex].id}. ${quizData[nextIndex].question}`); // Update question with ID
         setOptions(quizData[nextIndex].options);
         setSelectedOption(null); // Reset selected option for next question
       } else {
@@ -120,7 +127,6 @@ function App() {
 }
 
 export default App;
-
 
 
 
