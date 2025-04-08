@@ -62,11 +62,11 @@ jobs:
       - name: Build and Push Backend Docker Image
         working-directory: ./backend
         run: |
-          docker build -t your-dockerhub-username/backend:latest .
-          docker push your-dockerhub-username/backend:latest
+          docker build -t gracezheng72/backend:latest .
+          docker push gracezheng72/backend:latest
 
       - name: Build and Push Frontend Docker Image
         working-directory: ./frontend
         run: |
-          docker build -t your-dockerhub-username/frontend:latest .
-          docker push your-dockerhub-username/frontend:latest
+          docker build -t gracezheng72/frontend:latest .
+          docker push gracezheng72/frontend:latest
