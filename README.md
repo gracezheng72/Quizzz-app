@@ -39,5 +39,5 @@ Open [http://127.0.0.1:8000/quiz](http://127.0.0.1:8000/quiz) to see quiz questi
    npm start
    ```
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3000](http://localhost:3000) to take the quiz in your browser.
 
