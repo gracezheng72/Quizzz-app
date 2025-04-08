@@ -17,25 +17,28 @@ Follow these steps to set up and run the app locally.
    git clone https://github.com/gracezheng72/Quizzz-app
 
 2. Start backend
-  ```bash
-  cd backend
-  pip install -r requirements.txt
-  ```
-  💡 Note: If you encounter issues, make sure your `pip` is up-to-date by running:
-  ```bash
-  pip install --upgrade pip.
-  ```
-  ```bash
-  python restapi.py
-  ```
+   ```bash
+   cd backend
+   ```
+   Download the necessary dependencies(if necessary):
+   ```bash
+   pip install -r requirements.txt
+   ```
+   💡 Note: If you encounter issues, make sure your `pip` is up-to-date by running:
+   ```bash
+   pip install --upgrade pip.
+   ```
+   ```bash
+   python restapi.py
+   ```
 
 Open [http://127.0.0.1:8000/quiz](http://127.0.0.1:8000/quiz) to see quiz questions in JSON format in your browser.
 
 3. Start frontend
-  ```bash
-  cd frontend
-  npm start
-
+   ```bash
+   cd frontend
+   npm start
+   ```
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
